@@ -1,0 +1,70 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Body Lotion",
+      "brand": "Nivea",
+      "price": 12.99,
+      "rating": 4.8,
+      "stock": 30,
+      "description": "Deep moisturizing body lotion that keeps your skin soft, smooth, and hydrated throughout the summer.",
+      "image": "https://i.ibb.co/hxgYX1Q1/bodylotion.jpg",
+      "category": "Body Care"
+    },
+    {
+      "id": 2,
+      "name": "Beach Umbrella",
+      "brand": "SunGuard",
+      "price": 49.99,
+      "rating": 4.9,
+      "stock": 20,
+      "description": "A premium UV-resistant beach umbrella designed to provide maximum shade and comfort during sunny beach trips.",
+      "image": "https://i.ibb.co/bjYCwQqF/umberrala.jpg",
+      "category": "Beach Essentials"
+    },
+    {
+      "id": 3,
+      "name": "Insulated Water Bottle",
+      "brand": "CoolSip",
+      "price": 24.99,
+      "rating": 4.7,
+      "stock": 28,
+      "description": "Double-wall insulated stainless steel water bottle that keeps drinks cold for up to 24 hours.",
+      "image": "https://i.ibb.co/cKM38B8G/water-bottle.jpg",
+      "category": "Hydration"
+    },
+    {
+      "id": 4,
+      "name": "Portable Cooling Fan",
+      "brand": "BreezeGo",
+      "price": 21.99,
+      "rating": 4.8,
+      "stock": 22,
+      "description": "Rechargeable portable cooling fan with three speed settings, perfect for travel and outdoor activities.",
+      "image": "https://i.ibb.co/kvFpnPY/protabblecollingfan.jpg",
+      "category": "Electronics"
+    },
+    {
+      "id": 5,
+      "name": "Summer Flip Flops",
+      "brand": "WaveWalk",
+      "price": 19.99,
+      "rating": 4.7,
+      "stock": 40,
+      "description": "Comfortable lightweight flip flops with anti-slip soles, ideal for beaches and summer outings.",
+      "image": "https://i.ibb.co/dqf3nym/filp-flops.avif",
+      "category": "Footwear"
+    },
+    {
+      "id": 6,
+      "name": "Portable Air Conditioner",
+      "brand": "CoolAir",
+      "price": 399.99,
+      "rating": 4.9,
+      "stock": 10,
+      "description": "Energy-efficient portable air conditioner with fast cooling, multiple fan modes, and remote control.",
+      "image": "https://i.ibb.co/mFcDWKDW/protableairconditioner.jpg",
+      "category": "Home Appliances"
+    }
+  ]
+}

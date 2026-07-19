@@ -1,0 +1,46 @@
+{
+  "summerCareTips": [
+    {
+      "id": 1,
+      "title": "Stay Hydrated",
+      "image": "https://i.ibb.co.com/VpP7Mcn6/Stay-Hydrated.jpg",
+      "rating": 4.9,
+      "description": "Drink at least 8–10 glasses of water every day to stay hydrated and maintain your body's energy during hot summer weather."
+    },
+    {
+      "id": 2,
+      "title": "Apply Sunscreen Daily",
+      "image": "https://i.ibb.co.com/LDJGQQkL/Apply-Sunscreen-Daily.jpg",
+      "rating": 4.8,
+      "description": "Use a broad-spectrum sunscreen with SPF 30 or higher before going outside to protect your skin from harmful UV rays."
+    },
+    {
+      "id": 3,
+      "title": "Wear Sunglasses Outdoors",
+      "image": "https://i.ibb.co.com/203cnchw/Wear-Sunglasses-Outdoors.jpg",
+      "rating": 4.7,
+      "description": "Choose UV-protection sunglasses to reduce eye strain and protect your eyes from strong sunlight."
+    },
+    {
+      "id": 4,
+      "title": "Eat Fresh Fruits",
+      "image": "https://i.ibb.co.com/3mZzKWbD/Eat-Fresh-Fruits.jpg",
+      "rating": 4.9,
+      "description": "Include water-rich fruits like watermelon, oranges, and cucumbers in your daily diet to stay refreshed."
+    },
+    {
+      "id": 5,
+      "title": "Wear Lightweight Cotton Clothes",
+      "image": "https://i.ibb.co.com/nMsT0WMn/Wear-Lightweight-Cotton-Clothes.jpg",
+      "rating": 4.6,
+      "description": "Light-colored cotton clothing helps your body stay cool and comfortable by allowing better airflow."
+    },
+    {
+      "id": 6,
+      "title": "Keep Your Skin Moisturized",
+      "image": "https://i.ibb.co.com/fdq5ZGMr/skin-moisturizing.png",
+      "rating": 4.8,
+      "description": "Apply a lightweight moisturizer after washing your face to keep your skin soft, healthy, and hydrated."
+    }
+  ]
+}
