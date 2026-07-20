@@ -4,9 +4,7 @@ import ProductsCard from './ProductsCard';
 const Topproducts = async () => {
      const res = await fetch("https://suncart-summer-essentials-store-wpf.vercel.app/data.json")
     const data = await res.json()
-    // console.log(products)
-    // const topProducts = products.products.slice(0,3);
-    // console.log(topProducts)
+   
       const topproducts = data.products
     .sort((a, b) => b.rating - a.rating)
     .slice(0, 3);

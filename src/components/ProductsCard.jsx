@@ -5,7 +5,7 @@ import React from "react";
 import { FaStar, FaTag } from "react-icons/fa";
 
 const ProductsCard = ({ product }) => {
-  console.log(product);
+//   console.log(product);
   return (
     <Card className="border rounded-xl overflow-hidden">
       <div className="relative  w-full aspect-square group">
