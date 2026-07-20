@@ -7,14 +7,14 @@ import { FaStar, FaTag } from "react-icons/fa";
 const ProductsCard = ({ product }) => {
 //   console.log(product);
   return (
-    <Card className="border rounded-xl overflow-hidden">
+    <Card className="border border-gray-200  hover:xl transition-all duration-300 shadow-md rounded-xl overflow-hidden ">
       <div className="relative  w-full aspect-square group">
         <Image
           src={product.image}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           alt={product.name}
-          className=" object-cover rounded-xl transition-transform duration-300 group-hover:scale-105"
+   className="object-cover transition-all duration-700 ease-in-out group-hover:scale-110 group-hover:brightness-110 group-hover:contrast-110"
         />
         <Chip
           size="small"
