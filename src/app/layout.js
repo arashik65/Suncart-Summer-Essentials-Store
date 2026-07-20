@@ -2,13 +2,11 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Toaster } from "sonner";
 
 const OutfitFont = Outfit({
-
   subsets: ["latin"],
 });
-
-
 
 export const metadata = {
   title: "Create Next App",
@@ -17,16 +15,21 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${OutfitFont.className} h-full antialiased`}
-    >
+    <html lang="en" className={`${OutfitFont.className} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
         <Navbar></Navbar>
-       <main className="max-w-7xl mx-auto w-full">{children}</main> 
-       <Footer></Footer>
+        <main className="max-w-7xl mx-auto w-full">
+          {children}
 
-        </body>
+<Toaster
+  theme="light"
+  position="top-right"
+  richColors
+  closeButton
+/>
+        </main>
+        <Footer></Footer>
+      </body>
     </html>
   );
 }
