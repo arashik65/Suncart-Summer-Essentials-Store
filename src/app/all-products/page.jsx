@@ -1,3 +1,4 @@
+import SearchByTitle from "@/components/Category";
 import ProductsCard from "@/components/ProductsCard";
 import React from "react";
 
@@ -12,13 +13,31 @@ const AllProductPage = async () => {
     <div>
       <h1 className="text-3xl font-bold my-5">All Products</h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {data.products.map((product) => (
-          <ProductsCard key={product.id} product={product}></ProductsCard>
-        ))}
-      </div>
+       <SearchByTitle products={data.products} />
+
+    
     </div>
   );
 };
 
 export default AllProductPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
