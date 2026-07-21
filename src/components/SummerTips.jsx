@@ -92,12 +92,14 @@
 
 import { Card } from "@heroui/react";
 import Image from "next/image";
-import React from "react";
+import fs from "fs/promises";
+import path from "path";
 
 const SummerTipsCare = async () => {
-  const res = await fetch("http://localhost:3000/tips.json");
+  const filePath = path.join(process.cwd(), "public", "tips.json");
+  const fileContents = await fs.readFile(filePath, "utf8");
+  const data = JSON.parse(fileContents);
 
-  const data = await res.json();
   const tips = data.summerCareTips;
 
   return (
@@ -131,7 +133,6 @@ const SummerTipsCare = async () => {
               key={tip.id}
               className="border rounded-xl overflow-hidden group shadow-md hover:shadow-xl transition-all duration-300"
             >
-              {/* Image */}
               <div className="relative w-full h-52 sm:h-56 lg:h-60 overflow-hidden">
                 <Image
                   src={tip.image}
@@ -142,7 +143,6 @@ const SummerTipsCare = async () => {
                 />
               </div>
 
-              {/* Content */}
               <div className="p-4 space-y-3">
                 <h3 className="text-lg sm:text-xl font-bold text-gray-800 group-hover:text-[#422ad5] transition-colors">
                   {tip.title}
