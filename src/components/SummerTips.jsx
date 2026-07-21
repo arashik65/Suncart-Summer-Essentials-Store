@@ -95,9 +95,7 @@ import Image from "next/image";
 import React from "react";
 
 const SummerTipsCare = async () => {
-  const res = await fetch("http://localhost:3000/tips.json", {
-    cache: "no-store",
-  });
+  const res = await fetch("http://localhost:3000/tips.json");
 
   const data = await res.json();
   const tips = data.summerCareTips;
