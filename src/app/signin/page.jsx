@@ -28,10 +28,14 @@ export default function SignInPage() {
     });
     if (!error) {
       toast.success("SignIn successful!");
-  
     } else {
       toast.error(error.message || "SignIn failed!");
     }
+  };
+  const handleGoogleSignIn = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+    });
   };
 
   return (
@@ -94,9 +98,9 @@ export default function SignInPage() {
         </div>
       </Form>
       <p className="text-center">Or</p>
-      <Button variant="outline" className="w-full">
+      <Button onClick={handleGoogleSignIn} variant="outline" className="w-full">
         <GrGoogle />
-        Login with Google
+        Sign with Google
       </Button>
     </Card>
   );
