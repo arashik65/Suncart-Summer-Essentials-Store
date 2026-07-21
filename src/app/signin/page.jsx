@@ -102,7 +102,7 @@ export default function SignInPage() {
       </Form>
       <p className="text-center">Or</p>
       <Button
-        onClick={handleGoogleSignUp}
+        onClick={handleGoogleSignIn}
         variant="outline"
         className="w-full mt-4"
       >

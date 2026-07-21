@@ -26,7 +26,7 @@ const Banner = () => {
                 </Button>
               </Link>
 
-              <Link href="/all-products">
+              <Link href="/all-products"> 
                 <Button variant="outline" className="cursor-pointer text-white">
                   View Products
                 </Button>

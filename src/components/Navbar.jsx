@@ -4,12 +4,16 @@ import { Avatar, Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { IoMdMenu } from "react-icons/io";
+import { useState } from "react";
 
 const Navbar = () => {
   const userData = authClient.useSession();
   // console.log(userData)
   const user = userData.data?.user;
   // console.log(user);
+
+  const [open, setOpen] = useState(false);
+
   const handleSignOut = async () => {
     await authClient.signOut();
   };
@@ -80,7 +84,6 @@ const Navbar = () => {
           </button>
         </div>
       </nav>
-
       {/* Mobile Menu */}
       {open && (
         <div className="lg:hidden border-t px-4 py-3 space-y-3 bg-white">
