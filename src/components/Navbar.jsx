@@ -3,14 +3,14 @@ import { authClient } from "@/lib/auth-client";
 import { Avatar, Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
-
+import { IoMdMenu } from "react-icons/io";
 
 const Navbar = () => {
   const userData = authClient.useSession();
   // console.log(userData)
   const user = userData.data?.user;
   // console.log(user);
-    const handleSignOut = async () => {
+  const handleSignOut = async () => {
     await authClient.signOut();
   };
   return (
@@ -57,7 +57,7 @@ const Navbar = () => {
               </ul>
             )}
 
-       {user && (
+            {user && (
               <div className="flex gap-3 items-center">
                 <Avatar size="sm">
                   <Avatar.Image
@@ -68,14 +68,63 @@ const Navbar = () => {
                   <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
                 </Avatar>
 
-                <Button  onClick={handleSignOut} size="sm" variant="danger">
-                 Sign out
+                <Button onClick={handleSignOut} size="sm" variant="danger">
+                  Sign out
                 </Button>
               </div>
-            )}  
+            )}
           </div>
+          {/* Hamburger Button (sm/md only) */}
+          <button className="lg:hidden text-2xl" onClick={() => setOpen(!open)}>
+            <IoMdMenu />
+          </button>
         </div>
       </nav>
+
+      {/* Mobile Menu */}
+      {open && (
+        <div className="lg:hidden border-t px-4 py-3 space-y-3 bg-white">
+          <Link onClick={() => setOpen(false)} href="/">
+            Home
+          </Link>
+          <br />
+          <Link onClick={() => setOpen(false)} href="/all-products">
+            All Products
+          </Link>
+          <br />
+          <Link onClick={() => setOpen(false)} href="/profile">
+            My Profile
+          </Link>
+
+          <div className="pt-3 border-t mt-3">
+            {!user && (
+              <div className="flex gap-4 text-sm">
+                <Link href="/signin">Login</Link>
+                <Link href="/signup">Register</Link>
+              </div>
+            )}
+
+            {user && (
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <Avatar size="sm">
+                    <Avatar.Image
+                      src={user?.image}
+                      referrerPolicy="no-referrer"
+                    />
+                    <Avatar.Fallback>{user?.name.charAt(0)}</Avatar.Fallback>
+                  </Avatar>
+                  <span className="text-sm">{user?.name}</span>
+                </div>
+
+                <Button onClick={handleSignOut} size="sm" variant="danger">
+                  Logout
+                </Button>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

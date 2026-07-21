@@ -39,10 +39,13 @@ export default function SignInPage() {
   };
 
   return (
-    <Card className="border mx-auto w-125 py-10 mt-5">
+    <Card className="border mx-auto w-full max-w-[500px] py-10 mt-5 px-4 sm:px-6">
       <h1 className="text-center text-2xl font-bold"> Sign In</h1>
 
-      <Form className="flex w-96 mx-auto flex-col gap-4" onSubmit={onSubmit}>
+      <Form
+        className="flex w-full max-w-md mx-auto flex-col gap-4"
+        onSubmit={onSubmit}
+      >
         <TextField
           isRequired
           name="email"
@@ -98,7 +101,11 @@ export default function SignInPage() {
         </div>
       </Form>
       <p className="text-center">Or</p>
-      <Button onClick={handleGoogleSignIn} variant="outline" className="w-full">
+      <Button
+        onClick={handleGoogleSignUp}
+        variant="outline"
+        className="w-full mt-4"
+      >
         <GrGoogle />
         Sign with Google
       </Button>
