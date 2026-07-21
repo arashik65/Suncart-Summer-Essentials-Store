@@ -32,7 +32,7 @@ export default function SignUpPage() {
       password,
       image,
     });
-    console.log({ data, error });
+    // console.log({ data, error });
     if (!error) {
       toast.success("Signup successful!");
       router.push("/");
